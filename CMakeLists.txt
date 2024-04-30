@@ -9,6 +9,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED YES)
 
+set(CMAKE_PREFIX_PATH /home/lyon/ws/MLC/llvm-project-llvmorg-18.1.0/install/)
+
 # 设置输出目录
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
@@ -25,25 +27,27 @@ include(HandleLLVMOptions)
 
 include_directories(${LLVM_INCLUDE_DIRS} ${MLIR_INCLUDE_DIRS})
 
-add_executable(ex1-io ex1-io/ex1-io.cpp)
-target_link_libraries(
-  ex1-io
-  MLIRIR
-  MLIRParser
-  MLIRFuncDialect
-  MLIRArithDialect
-)
+# add_executable(ex1-io ex1-io/ex1-io.cpp)
+# target_link_libraries(
+# ex1-io
+# MLIRIR
+# MLIRParser
+# MLIRFuncDialect
+# MLIRArithDialect
+# )
 
-add_executable(ex2-build ex2-build/ex2-build.cpp)
-target_link_libraries(
-  ex2-build
-  MLIRIR
-  MLIRParser
-  MLIRFuncDialect
-  MLIRArithDialect
-)
-
+# add_executable(ex2-build ex2-build/ex2-build.cpp)
+# target_link_libraries(
+# ex2-build
+# MLIRIR
+# MLIRParser
+# MLIRFuncDialect
+# MLIRArithDialect
+# )
 # add_subdirectory(ex3-dialect)
 # add_subdirectory(ex4-beautiful-dialect)
 # add_subdirectory(ex5-pass)
-add_subdirectory(ex7-convert)
+# add_subdirectory(ex6-pattern)
+add_subdirectory(mlir-toy)
+
+# add_subdirectory(ex7-convert)
