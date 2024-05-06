@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13.4)
 
-project(mlir-toy VERSION 0.0.0)
+project(mlir-tutorial-toy VERSION 0.0.0)
 
 # 防止 cmake 生成一堆 warning
 cmake_policy(SET CMP0116 NEW)
@@ -44,10 +44,11 @@ include_directories(${LLVM_INCLUDE_DIRS} ${MLIR_INCLUDE_DIRS})
 # MLIRFuncDialect
 # MLIRArithDialect
 # )
-# add_subdirectory(ex3-dialect)
+add_subdirectory(ex3-dialect)
+
 # add_subdirectory(ex4-beautiful-dialect)
 # add_subdirectory(ex5-pass)
 # add_subdirectory(ex6-pattern)
-add_subdirectory(mlir-toy)
+# add_subdirectory(mlir-toy)
 
 # add_subdirectory(ex7-convert)
